@@ -2,7 +2,7 @@
 project ke dua dari latihan javascript membuat aplikasi inventory yang simple full **HTMl** ,**CSS** dan **JavaScript** (tanpa framefork).
 Fitur mencakup tambah barang,edit barang,dan hapus barang
 
-##🔥fitur utama :
+## 🔥fitur utama :
 - 📝 Tambah Barang
 - 🛠️ Edit Barang
 - 🗑️ Hapus per Barang
