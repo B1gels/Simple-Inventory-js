@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Inventory App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-boxes"></i> Aplikasi Inventory Barang</h1>
+            <p>Sistem manajemen inventori sederhana untuk toko, gudang, atau kasir</p>
+        </header>
+
+        <div class="card">
+            <h2><i class="fas fa-plus-circle"></i> Form Barang</h2>
+            <form id="itemForm">
+                <div class="form-group">
+                    <label for="itemName"><i class="fas fa-tag"></i> Nama Barang</label>
+                    <input type="text" id="itemName" placeholder="Masukkan nama barang" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemPrice"><i class="fas fa-money-bill-wave"></i> Harga Barang</label>
+                        <input type="number" id="itemPrice" placeholder="Masukkan harga" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemStock"><i class="fas fa-box-open"></i> Stok Barang</label>
+                        <input type="number" id="itemStock" placeholder="Masukkan stok" min="0" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="itemCode"><i class="fas fa-barcode"></i> Kode Barang (opsional)</label>
+                    <input type="text" id="itemCode" placeholder="Masukkan kode barang">
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn"><i class="fas fa-plus"></i> Tambah
+                    Barang</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-search"></i> Pencarian Barang</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari barang berdasarkan nama...">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-list"></i> Daftar Barang</h2>
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Kode</th>
+                        <th>Nama Barang</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="itemTableBody">
+                </tbody>
+                <!-- Data akan dimasukkan melalui JavaScript -->
+                <tr id="emptyProduk">
+                    <td colspan="7" style="text-align: center;">Tidak ada data barang :( </td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="7" style="text-align: center;"><button id="deleteAll"> hapus semua data</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h3><i class="fas fa-boxes"></i> Total Barang</h3>
+                <p id="totalItems">0</p>
+            </div>
+            <div class="stat-item">
+                <h3><i class="fas fa-calculator"></i> Total Nilai Inventaris</h3>
+                <p id="totalValue">Rp 0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
